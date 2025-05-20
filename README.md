@@ -3,17 +3,17 @@
 ## Deskripsi Aplikasi
 Aplikasi **To-Do List** ini adalah aplikasi CRUD (Create, Read, Update, Delete) berbasis **Flutter** sebagai frontend dan **Laravel** sebagai backend API. Aplikasi ini memungkinkan pengguna untuk:
 - Menambahkan tugas dengan title, prioritas, dan deadline
-- Mengatur tanggal dan jam `created_at` dan `updated_at **sesuai tanggal dan waktu di laptop saat membuat dan mengedit tugaS**
+- Mengatur tanggal dan jam `created_at` dan `updated_at` **sesuai tanggal dan waktu di laptop saat membuat dan mengedit tugas**
 - Mengedit tugas
 - Menghapus tugas (otomatis jika dichecklist)
 - Menampilkan semua tugas dengan tampilan modern menggunakan Flutter Card
 
-### Halaman Aplikasi
+## Fitur Utama
 - **Halaman Utama**: Menampilkan daftar semua tugas
 - **Form Tambah/Edit**: Input title, prioritas, deadline, created_at, updated_at
 - **Checklist**: Menandai tugas selesai dan langsung menghapusnya
 
-### Database
+## Database
 Menggunakan database **MySQL** dengan tabel `tasks` dan field berikut:
 - `id`
 - `title`
@@ -23,7 +23,7 @@ Menggunakan database **MySQL** dengan tabel `tasks` dan field berikut:
 - `created_at`
 - `updated_at`
 
-### API (Laravel)
+## API (Laravel)
 API berada di folder `/api/` dengan endpoint:
 - `GET /api/tasks` — Menampilkan semua tugas
 - `POST /api/tasks` — Menambah tugas baru
@@ -46,53 +46,65 @@ API berada di folder `/api/` dengan endpoint:
 ```bash
 git clone https://github.com/Rifai-hub24/todolist
 cd todolist
+```
 
-###2. Backend (Laravel)
-'''Masuk folder api/
+### 2. Backend (Laravel)
+Masuk ke folder `api/`:
 
-Jalankan:
+```bash
+cd api
 composer install
 cp .env.example .env
 php artisan key:generate
+```
 
-Sesuaikan .env:
+Edit file `.env` dan sesuaikan konfigurasi database:
+```
 DB_DATABASE=todo_app
 DB_USERNAME=root
-DB_PASSWORD= // kosongkan jika tidak pakai password
+DB_PASSWORD=   # kosongkan jika tidak pakai password
+```
 
-Jalankan migrasi:
-
+Jalankan migrasi database:
+```bash
 php artisan migrate
 php artisan serve
+```
 
-###3. Frontend (Flutter)
-Masuk ke folder flutter_app/ (atau lib/ jika semua di main.dart)
+### 3. Frontend (Flutter)
+Masuk ke folder aplikasi Flutter (misal: `flutter_app/`):
 
-Jalankan:
+```bash
+cd flutter_app
 flutter pub get
 flutter run
+```
 
-###Cara Menjalankan
-Jalankan Laravel API:
-php artisan serve
+---
 
-Jalankan Flutter:
-flutter run
+## Cara Menjalankan
 
-###Demo Aplikasi
+1. Jalankan Laravel API:
+   ```bash
+   php artisan serve
+   ```
+2. Jalankan Flutter:
+   ```bash
+   flutter run
+   ```
 
-https://github.com/user-attachments/assets/b59c5011-58e4-44da-87a5-f71d24c98f84
+---
 
-Identitas Pembuat
-Nama: Muhammad Irfan Rifai
-No:21
-Kelas:XI RPL2
-Sekolah: SMK Negeri 1 Bantul
-Jurusan: Rekayasa Perangkat Lunak (RPL)
+## Demo Aplikasi
 
+![Demo Aplikasi](https://github.com/user-attachments/assets/b59c5011-58e4-44da-87a5-f71d24c98f84)
 
+---
 
+## Identitas Pembuat
 
-
- 
-
+- **Nama**: Muhammad Irfan Rifai
+- **No**: 21
+- **Kelas**: XI RPL2
+- **Sekolah**: SMK Negeri 1 Bantul
+- **Jurusan**: Rekayasa Perangkat Lunak (RPL)
