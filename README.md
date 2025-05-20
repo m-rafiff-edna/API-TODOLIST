@@ -1,51 +1,98 @@
-# Flutter To-Do List App
+# Aplikasi To-Do List CRUD (Flutter + Laravel)
 
-Aplikasi To-Do List sederhana menggunakan Flutter yang terhubung ke backend Laravel melalui REST API.
+## Deskripsi Aplikasi
+Aplikasi **To-Do List** ini adalah aplikasi CRUD (Create, Read, Update, Delete) berbasis **Flutter** sebagai frontend dan **Laravel** sebagai backend API. Aplikasi ini memungkinkan pengguna untuk:
+- Menambahkan tugas dengan title, prioritas, dan deadline
+- Mengatur tanggal dan jam `created_at` dan `updated_at **sesuai tanggal dan waktu di laptop saat membuat dan mengedit tugaS**
+- Mengedit tugas
+- Menghapus tugas (otomatis jika dichecklist)
+- Menampilkan semua tugas dengan tampilan modern menggunakan Flutter Card
 
-## Fitur
+### Halaman Aplikasi
+- **Halaman Utama**: Menampilkan daftar semua tugas
+- **Form Tambah/Edit**: Input title, prioritas, deadline, created_at, updated_at
+- **Checklist**: Menandai tugas selesai dan langsung menghapusnya
 
-- Menampilkan daftar tugas (to-do) dari backend.
-- Menambah tugas baru dengan judul, prioritas, dan tanggal deadline.
-- Mengedit tugas yang sudah ada.
-- Menghapus tugas.
-- Menandai tugas sebagai selesai/belum selesai.
-- Fitur pencarian tugas berdasarkan judul.
-- Tampilan prioritas tugas dengan warna berbeda (high, medium, low).
-- Menampilkan tanggal pembuatan, update, dan deadline tugas.
+### Database
+Menggunakan database **MySQL** dengan tabel `tasks` dan field berikut:
+- `id`
+- `title`
+- `priority` (low, medium, high)
+- `due_date`
+- `is_done`
+- `created_at`
+- `updated_at`
 
-## Struktur Kode Utama
+### API (Laravel)
+API berada di folder `/api/` dengan endpoint:
+- `GET /api/tasks` — Menampilkan semua tugas
+- `POST /api/tasks` — Menambah tugas baru
+- `PUT /api/tasks/{id}` — Mengupdate tugas
+- `DELETE /api/tasks/{id}` — Menghapus tugas
 
-- **Task**: Model data tugas.
-- **TodoListPage**: Halaman utama yang menampilkan daftar tugas dan fitur CRUD.
-- **fetchTasks**: Mengambil data tugas dari API.
-- **addTask**: Menambah tugas baru ke backend.
-- **editTask**: Mengedit data tugas di backend.
-- **deleteTask**: Menghapus tugas dari backend.
-- **updateTaskStatus**: Mengubah status selesai/belum selesai tugas.
-- **showAddDialog / showEditDialog**: Dialog untuk menambah/mengedit tugas.
-- **getFilteredTasks**: Filter dan urutkan tugas berdasarkan pencarian dan deadline.
-
-## Cara Menjalankan
-
-1. Pastikan backend Laravel berjalan di `http://127.0.0.1:8000` dan endpoint API sudah sesuai.
-2. Jalankan perintah berikut di folder Flutter:
-   ```sh
-   flutter pub get
-   flutter run
-   ```
-3. Pastikan gambar `images/download.png` tersedia untuk logo aplikasi.
-
-## Koneksi API
-
-Aplikasi ini menggunakan endpoint berikut:
-- `GET /api/tasks` – Ambil semua tugas
-- `POST /api/tasks` – Tambah tugas baru
-- `PUT /api/tasks/{id}` – Edit tugas
-- `DELETE /api/tasks/{id}` – Hapus tugas
-
-Pastikan backend Laravel sudah menyediakan endpoint di atas.
+## Software yang Digunakan
+- **Flutter** (versi terbaru)
+- **Laravel 10**
+- **MySQL**
+- **Postman** (untuk testing API)
+- **VS Code**
+- **Laragon**
 
 ---
 
-**Catatan:**  
-Kode utama aplikasi dapat dilihat di file [`lib/main.dart`](lib/main.dart).
+## Cara Instalasi
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/Rifai-hub24/todolist
+cd todolist
+
+###2. Backend (Laravel)
+'''Masuk folder api/
+
+Jalankan:
+composer install
+cp .env.example .env
+php artisan key:generate
+
+Sesuaikan .env:
+DB_DATABASE=todo_app
+DB_USERNAME=root
+DB_PASSWORD= // kosongkan jika tidak pakai password
+
+Jalankan migrasi:
+
+php artisan migrate
+php artisan serve
+
+###3. Frontend (Flutter)
+Masuk ke folder flutter_app/ (atau lib/ jika semua di main.dart)
+
+Jalankan:
+flutter pub get
+flutter run
+
+###Cara Menjalankan
+Jalankan Laravel API:
+php artisan serve
+
+Jalankan Flutter:
+flutter run
+
+###Demo Aplikasi
+
+https://github.com/user-attachments/assets/b59c5011-58e4-44da-87a5-f71d24c98f84
+
+Identitas Pembuat
+Nama: Muhammad Irfan Rifai
+No:21
+Kelas:XI RPL2
+Sekolah: SMK Negeri 1 Bantul
+Jurusan: Rekayasa Perangkat Lunak (RPL)
+
+
+
+
+
+ 
+
