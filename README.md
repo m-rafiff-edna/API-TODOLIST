@@ -5,13 +5,13 @@ Aplikasi **To-Do List** ini adalah aplikasi CRUD (Create, Read, Update, Delete) 
 - Menambahkan tugas dengan title, prioritas, dan deadline
 - Mengatur tanggal dan jam `created_at` dan `updated_at` **sesuai tanggal dan waktu di laptop saat membuat dan mengedit tugas**
 - Mengedit tugas
-- Menghapus tugas (otomatis jika dichecklist)
+- Menghapus tugas 
 - Menampilkan semua tugas dengan tampilan modern menggunakan Flutter Card
 
 ## Fitur Utama
 - **Halaman Utama**: Menampilkan daftar semua tugas
 - **Form Tambah/Edit**: Input title, prioritas, deadline, created_at, updated_at
-- **Checklist**: Menandai tugas selesai dan langsung menghapusnya
+- **Checklist**: Menandai tugas selesai
 
 ## Database
 Menggunakan database **MySQL** dengan tabel `tasks` dan field berikut:
@@ -97,7 +97,7 @@ flutter run
 
 ## Demo Aplikasi
 
-![Demo Aplikasi](https://github.com/user-attachments/assets/b59c5011-58e4-44da-87a5-f71d24c98f84)
+https://github.com/user-attachments/assets/b59c5011-58e4-44da-87a5-f71d24c98f84
 
 ---
 
