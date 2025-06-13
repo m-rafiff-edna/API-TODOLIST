@@ -96,8 +96,12 @@ flutter run
 ---
 
 ## Demo Aplikasi
+ 
 
-https://github.com/user-attachments/assets/b59c5011-58e4-44da-87a5-f71d24c98f84
+
+https://github.com/user-attachments/assets/30e4324c-d894-469e-ada8-1e845e0acdf0
+
+
 
 ---
 
