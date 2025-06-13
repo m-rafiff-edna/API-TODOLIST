@@ -103,8 +103,8 @@ https://github.com/user-attachments/assets/b59c5011-58e4-44da-87a5-f71d24c98f84
 
 ## Identitas Pembuat
 
-- **Nama**: Muhammad Irfan Rifai
-- **No**: 21
+- **Nama**: Muhammad Rafif Edna
+- **No**: 24
 - **Kelas**: XI RPL2
 - **Sekolah**: SMK Negeri 1 Bantul
 - **Jurusan**: Rekayasa Perangkat Lunak (RPL)
